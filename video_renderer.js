@@ -33,6 +33,7 @@ export class VideoRenderer {
       codec: trackInfo.codec,
       description: trackInfo.extradata
     };
+    console.log(config, VideoDecoder.isConfigSupported(config));
     console.assert(VideoDecoder.isConfigSupported(config))
     this.decoder.configure(config);
 
