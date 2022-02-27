@@ -51,7 +51,7 @@ export class AudioRenderer {
     this.channelCount = trackInfo.numberOfChannels;
 
     debugLog(config);
-
+    console.log(config, AudioDecoder.isConfigSupported(config));
     console.assert(AudioDecoder.isConfigSupported(config));
     this.decoder.configure(config);
 
